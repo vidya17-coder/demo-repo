@@ -8,4 +8,4 @@ def read_root():
 @app.post("/items/{item_id}")
 def calculate_percentage(marks:int, total_marks:int):
     percentage = (marks / total_marks) * 100
-    return {"percentage": percentage}
+    return {"the total percentage": percentage}
