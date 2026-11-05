@@ -9,3 +9,8 @@ def read_root():
 def calculate_percentage(marks:int, total_marks:int):
     percentage = (marks / total_marks) * 100
     return {"the total percentage": percentage}
+
+@app.get("/subjects/{subject_id}")
+def sub_percentage(subject_id:int, marks:int, total_marks:int):
+    percentage = (marks / total_marks) * 100
+    return {"the percentage of subject": percentage}
