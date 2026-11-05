@@ -9,6 +9,11 @@ def read_root():
 def read_item(item_id: int, name: str = None): 
     return {"item_id": item_id, "name": name}
 
-@app.patch("/items/{item_id}")
-def update_item(item_id: int, name: str = None, description: str = None):
-    return {"item_id": item_id, "name": name, "description": description}
+@app.post("/diff")
+def diff(a: int, b: int):
+    difference = a - b
+    return {"the difference is": difference}
+@app.post("/sum")       
+def sum(a: int, b: int):
+    total = a + b
+    return {"the total is": total}  
